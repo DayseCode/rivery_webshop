@@ -1,17 +1,19 @@
-package ua.edu.nung.pz.dao;
+package ua.edu.nung.pz.dao.entity;
 
 import java.util.Arrays;
 
 public class Cart {
     private User user;
     private Good[] goods;
+    private Order[] orders;
 
     public Cart() {
     }
 
-    public Cart(User user, Good[] goods) {
+    public Cart(User user, Good[] goods, Order[] orders) {
         this.user = user;
         this.goods = goods;
+        this.orders = orders;
     }
 
     public User getUser() {
@@ -28,6 +30,14 @@ public class Cart {
 
     public void setGoods(Good[] goods) {
         this.goods = goods;
+    }
+
+    public Order[] getOrders() {
+        return orders;
+    }
+
+    public void setOrders(Order[] orders) {
+        this.orders = orders;
     }
 
     @Override
